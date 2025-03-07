@@ -15,9 +15,9 @@ Route::get('/user', function (Request $request) {
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
-// Route::middleware('auth:api')->group(function () {
+Route::middleware('auth:api')->group(function () {
     Route::apiResource('projects', ProjectController::class);
     Route::apiResource('attributes', AttributeController::class);
     Route::apiResource('timesheets', TimesheetController::class);
     Route::post('/logout', [AuthController::class, 'logout']);
-// });
+});

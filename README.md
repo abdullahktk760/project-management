@@ -2,6 +2,7 @@
 
 A Laravel-based API for managing users, projects, timesheets, and dynamic project attributes using EAV.
 
+php version should 8.2 or higher
 ## Setup Instructions
 
 composer install
