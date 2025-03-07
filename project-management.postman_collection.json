@@ -1,0 +1,1165 @@
+{
+	"info": {
+		"_postman_id": "8be60771-23ea-4faa-b26d-746298be6f2b",
+		"name": "project-management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20929526"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Test",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "User",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZGU2MDhjYWFhNWNkYWZhMWQyNTJjN2EwMTI0NjE4ZmMxMzgwZDk2NTk2NzA0Mzc5N2U0YTg3NjI4N2U3NDY0ZjQwM2RlODY1MjlkMzFiMjMiLCJpYXQiOjE3NDEzNTY4NTcuMzEwMDA2LCJuYmYiOjE3NDEzNTY4NTcuMzEwMDA4LCJleHAiOjE3NzI4OTI4NTcuMzAxNzM3LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.qGutXdCVgZ6-8ooPt0gzSLUV1Q7O-ZYKaBkTh3RoPfs6yM4mNFhbswen5nBw_E7mEMZL5X99VmD6sTlrmpRa9ooRLgJy1fKXVOcNJAmJrCayV8Tzx251kvbVm28ZohBQPM_EsYLkDVHoSZ6U_XoYONpm3r2h2Vl73FHO6jcu9cFffbjOOK4XOtAXxxmz87F8gzLqc3Iq9Ns_SHFup5GaLf3LTwIJ97GBhMEQIxiRngZfZdidUk2dN2COSQuq_8eI_rTl6NgBq5U47GJJoHs5aB-4sgxU5m0lrrVsdu_Zmcc0uvoL4kjA2gxc7YtlepNv1M12QHGjAhqByTSIbLo5upvWpFoBRub9jLHCdxFpu37IWR7g50vObxoocYnd0gOF9yplmsx5pYSXK61Vcy8UTyWCl3qfQSlqpXOzcUQ5w88IvhzJBnGae-rLuNMwmWgfVSphLO4iphbrYDTeY1h1ZYcGBum1IvW_dSweH-DuF4nYoYTxlnaL39uASQi7ZdiJHJTW1sbWDMXUYy8ZoKH4ZL-GurPyL_bzWOl-LjNF0DIovmFTX18jRmNcdUMv_pxcpKEsoqkeWBXCz61253NNTo9wFfHoR88me-yHY4DyTQf9JjVPIQhQ9vEr9RVo02FM7Kc_zGbIMRGPnwZLLEsalF44kj_r65guMiVS6LpnUVU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "test@example.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNzIxYjUwMTY2ZjJhZDkyOGQ3MDU5ZDYzZjFkNzA1ZWE1YTAxYjFiMzQzMzlkODE3NGExOTQxNWJiNWQwNjNlOTI2MzQ1MjNkOTc5ZGE3YWQiLCJpYXQiOjE3NDEzMzI1NzQuOTA0MzcxLCJuYmYiOjE3NDEzMzI1NzQuOTA0MzczLCJleHAiOjE3NzI4Njg1NzQuODk0OTMzLCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.oRR4iJa3nK1k1VtQrq5N6cna-kkpJin4ETWKwBC4UmIrzZvYZYQnTUY1VbEKJw7HEmpcRZKl2ErBCqwP5gqF_GwtBMbw_-sdrhQw5KZVmUtqPE4bhM2rHjd0tmbWE8AHaM5QjLegatDN3hE6sEZYmBEW11mtGV9ESVUVH_Nsqq3m5XYF_R-PEflOadXPmTiFuNjieDVv4ByOOybYAYo15SdkNRSY7kk6AMu4byEQ1IwQARQPcOOQiaJg4TuSPHadbKkHITPmpzh8AZ56bW1DUjW8lZi0a5cgpBcIFrgn-nWph5VhlQnUZ6t7M2-astjDgnZgk3W6L4nDplYJHtogfhVez2OWqtdJAUi9lV1wflPa0zMdhI8_QjVJma7k7zA6WNyFfBu8bw8FGTy0QHHIQvp1LhlC6CvcITFMEqhYvQ9fCzgC7v1ACFfQkYfKKLU_Ibe6FFsTViJYaF0mygYy8E7bxqrAO_Jba9k0u6wHT1BHl5qzB-a2b9vUqqTTPm0TmpXgwzZGVeoD8PwhAlctpDEMaSs6iXXHxFn38x2T09Egf4dH9CKHX8sAjpjh4dqBlfGaMpWBPtahNHdYk_UuMRaHCrmGLvjV_2bkomAJm4MMvgmPECS5fT9u1ImnnFoz7LfHARZ4ZWq4wM2e8hOY5_vsjelP0X97DH3Gl-bPkSI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "abdullah",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "khan",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "admin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Attrubute_crud",
+			"item": [
+				{
+					"name": "Store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWVlZGRjYjczNDU0NDg0NDMxNzRiNDgyYWFlMGI0OTYxMWViZjYyNjk0ZmRmMGMwODM0OGE5YjZjNDA1NTg4ZWFlNmEwY2EwZTc2N2U4MjgiLCJpYXQiOjE3NDExNjM4MTAuNDQ1MDk1LCJuYmYiOjE3NDExNjM4MTAuNDQ1MDk4LCJleHAiOjE3NzI2OTk4MTAuNDM2OTY4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.PDTZvgkBMc7q2tqNQNscZXQqc1NwkMN9SRZkykztfuv2-0MCxR-OBMQ7qDEejFPKqiHz9tAJZOy8tLMY1bqthJ5ZPNQTzuJfSLBsZip4fXpy6b4BnjQIhl865KKpD7TjZNfDSDSDBHMhHzGTZeoni3x0JXLPP6T5UD8XRTMZ6YO1oc_Sy5etii2H2WccR5LjhAEsoubkZL8GwfyRt9cNWT4i0BVnHB707B-iPxaE-F0kEUk8vPaQ35jG7h56UiQFXIDrhP6ieCsUG3D-eSeaKR8rvqXocagiBeArSHs9bTsgZ-rORjtTTzcvqdFJcCEvmTTbto7j8HogFLyyOb6QWhmyvbshceoxR70Ue0zLOLyCYDZJLLoCZNp7AebM3BafcvePKwYGDSZfdFI5y2jf1l7pe_KN43AktO5ex7WZI8NOkxaNXKqke6_JrIweL-bw9EbojJLoojwtGpSJP1A_LsGrqPB1GybM-puUGvqJujILE3g5fgMlxqxO9CsARd8WEBedV3710rfjbIuC8OWRBz1_TI3gAfeF_99JZorCHztgF7CBYBOMjXDsqm-mqYOaZo4jjMHfPWgEj1NKmGd5GnQcnXNVEVxjcm9z9bWPTTgphuEuwgbSZ1cog3MXvR5YUkpup1X-aB1JPFf2dGP_4Ize59LDJD73o5GD7rRXGPo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"department\",\r\n  \"type\": \"text\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/attributes",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"attributes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWVlZGRjYjczNDU0NDg0NDMxNzRiNDgyYWFlMGI0OTYxMWViZjYyNjk0ZmRmMGMwODM0OGE5YjZjNDA1NTg4ZWFlNmEwY2EwZTc2N2U4MjgiLCJpYXQiOjE3NDExNjM4MTAuNDQ1MDk1LCJuYmYiOjE3NDExNjM4MTAuNDQ1MDk4LCJleHAiOjE3NzI2OTk4MTAuNDM2OTY4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.PDTZvgkBMc7q2tqNQNscZXQqc1NwkMN9SRZkykztfuv2-0MCxR-OBMQ7qDEejFPKqiHz9tAJZOy8tLMY1bqthJ5ZPNQTzuJfSLBsZip4fXpy6b4BnjQIhl865KKpD7TjZNfDSDSDBHMhHzGTZeoni3x0JXLPP6T5UD8XRTMZ6YO1oc_Sy5etii2H2WccR5LjhAEsoubkZL8GwfyRt9cNWT4i0BVnHB707B-iPxaE-F0kEUk8vPaQ35jG7h56UiQFXIDrhP6ieCsUG3D-eSeaKR8rvqXocagiBeArSHs9bTsgZ-rORjtTTzcvqdFJcCEvmTTbto7j8HogFLyyOb6QWhmyvbshceoxR70Ue0zLOLyCYDZJLLoCZNp7AebM3BafcvePKwYGDSZfdFI5y2jf1l7pe_KN43AktO5ex7WZI8NOkxaNXKqke6_JrIweL-bw9EbojJLoojwtGpSJP1A_LsGrqPB1GybM-puUGvqJujILE3g5fgMlxqxO9CsARd8WEBedV3710rfjbIuC8OWRBz1_TI3gAfeF_99JZorCHztgF7CBYBOMjXDsqm-mqYOaZo4jjMHfPWgEj1NKmGd5GnQcnXNVEVxjcm9z9bWPTTgphuEuwgbSZ1cog3MXvR5YUkpup1X-aB1JPFf2dGP_4Ize59LDJD73o5GD7rRXGPo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/attributes",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"attributes"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "home updated",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWVlZGRjYjczNDU0NDg0NDMxNzRiNDgyYWFlMGI0OTYxMWViZjYyNjk0ZmRmMGMwODM0OGE5YjZjNDA1NTg4ZWFlNmEwY2EwZTc2N2U4MjgiLCJpYXQiOjE3NDExNjM4MTAuNDQ1MDk1LCJuYmYiOjE3NDExNjM4MTAuNDQ1MDk4LCJleHAiOjE3NzI2OTk4MTAuNDM2OTY4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.PDTZvgkBMc7q2tqNQNscZXQqc1NwkMN9SRZkykztfuv2-0MCxR-OBMQ7qDEejFPKqiHz9tAJZOy8tLMY1bqthJ5ZPNQTzuJfSLBsZip4fXpy6b4BnjQIhl865KKpD7TjZNfDSDSDBHMhHzGTZeoni3x0JXLPP6T5UD8XRTMZ6YO1oc_Sy5etii2H2WccR5LjhAEsoubkZL8GwfyRt9cNWT4i0BVnHB707B-iPxaE-F0kEUk8vPaQ35jG7h56UiQFXIDrhP6ieCsUG3D-eSeaKR8rvqXocagiBeArSHs9bTsgZ-rORjtTTzcvqdFJcCEvmTTbto7j8HogFLyyOb6QWhmyvbshceoxR70Ue0zLOLyCYDZJLLoCZNp7AebM3BafcvePKwYGDSZfdFI5y2jf1l7pe_KN43AktO5ex7WZI8NOkxaNXKqke6_JrIweL-bw9EbojJLoojwtGpSJP1A_LsGrqPB1GybM-puUGvqJujILE3g5fgMlxqxO9CsARd8WEBedV3710rfjbIuC8OWRBz1_TI3gAfeF_99JZorCHztgF7CBYBOMjXDsqm-mqYOaZo4jjMHfPWgEj1NKmGd5GnQcnXNVEVxjcm9z9bWPTTgphuEuwgbSZ1cog3MXvR5YUkpup1X-aB1JPFf2dGP_4Ize59LDJD73o5GD7rRXGPo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"department\",\r\n  \"type\": \"text\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/attributes/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"attributes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWVlZGRjYjczNDU0NDg0NDMxNzRiNDgyYWFlMGI0OTYxMWViZjYyNjk0ZmRmMGMwODM0OGE5YjZjNDA1NTg4ZWFlNmEwY2EwZTc2N2U4MjgiLCJpYXQiOjE3NDExNjM4MTAuNDQ1MDk1LCJuYmYiOjE3NDExNjM4MTAuNDQ1MDk4LCJleHAiOjE3NzI2OTk4MTAuNDM2OTY4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.PDTZvgkBMc7q2tqNQNscZXQqc1NwkMN9SRZkykztfuv2-0MCxR-OBMQ7qDEejFPKqiHz9tAJZOy8tLMY1bqthJ5ZPNQTzuJfSLBsZip4fXpy6b4BnjQIhl865KKpD7TjZNfDSDSDBHMhHzGTZeoni3x0JXLPP6T5UD8XRTMZ6YO1oc_Sy5etii2H2WccR5LjhAEsoubkZL8GwfyRt9cNWT4i0BVnHB707B-iPxaE-F0kEUk8vPaQ35jG7h56UiQFXIDrhP6ieCsUG3D-eSeaKR8rvqXocagiBeArSHs9bTsgZ-rORjtTTzcvqdFJcCEvmTTbto7j8HogFLyyOb6QWhmyvbshceoxR70Ue0zLOLyCYDZJLLoCZNp7AebM3BafcvePKwYGDSZfdFI5y2jf1l7pe_KN43AktO5ex7WZI8NOkxaNXKqke6_JrIweL-bw9EbojJLoojwtGpSJP1A_LsGrqPB1GybM-puUGvqJujILE3g5fgMlxqxO9CsARd8WEBedV3710rfjbIuC8OWRBz1_TI3gAfeF_99JZorCHztgF7CBYBOMjXDsqm-mqYOaZo4jjMHfPWgEj1NKmGd5GnQcnXNVEVxjcm9z9bWPTTgphuEuwgbSZ1cog3MXvR5YUkpup1X-aB1JPFf2dGP_4Ize59LDJD73o5GD7rRXGPo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"department\",\r\n  \"type\": \"text\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/attributes/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"attributes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWVlZGRjYjczNDU0NDg0NDMxNzRiNDgyYWFlMGI0OTYxMWViZjYyNjk0ZmRmMGMwODM0OGE5YjZjNDA1NTg4ZWFlNmEwY2EwZTc2N2U4MjgiLCJpYXQiOjE3NDExNjM4MTAuNDQ1MDk1LCJuYmYiOjE3NDExNjM4MTAuNDQ1MDk4LCJleHAiOjE3NzI2OTk4MTAuNDM2OTY4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.PDTZvgkBMc7q2tqNQNscZXQqc1NwkMN9SRZkykztfuv2-0MCxR-OBMQ7qDEejFPKqiHz9tAJZOy8tLMY1bqthJ5ZPNQTzuJfSLBsZip4fXpy6b4BnjQIhl865KKpD7TjZNfDSDSDBHMhHzGTZeoni3x0JXLPP6T5UD8XRTMZ6YO1oc_Sy5etii2H2WccR5LjhAEsoubkZL8GwfyRt9cNWT4i0BVnHB707B-iPxaE-F0kEUk8vPaQ35jG7h56UiQFXIDrhP6ieCsUG3D-eSeaKR8rvqXocagiBeArSHs9bTsgZ-rORjtTTzcvqdFJcCEvmTTbto7j8HogFLyyOb6QWhmyvbshceoxR70Ue0zLOLyCYDZJLLoCZNp7AebM3BafcvePKwYGDSZfdFI5y2jf1l7pe_KN43AktO5ex7WZI8NOkxaNXKqke6_JrIweL-bw9EbojJLoojwtGpSJP1A_LsGrqPB1GybM-puUGvqJujILE3g5fgMlxqxO9CsARd8WEBedV3710rfjbIuC8OWRBz1_TI3gAfeF_99JZorCHztgF7CBYBOMjXDsqm-mqYOaZo4jjMHfPWgEj1NKmGd5GnQcnXNVEVxjcm9z9bWPTTgphuEuwgbSZ1cog3MXvR5YUkpup1X-aB1JPFf2dGP_4Ize59LDJD73o5GD7rRXGPo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"department\",\r\n  \"type\": \"text\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/attributes/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"attributes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "project_crud",
+			"item": [
+				{
+					"name": "STORE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2YyZmI5Y2JmNDg2MzlmOWY0YWVlZDkwNmE5YzdjYzgzNzJmMGNiMzE3NGMwNGEwZDI5ZjQ0ODMzOGZkZGRhOWYyYmNjY2ZmN2MyYWU1M2YiLCJpYXQiOjE3NDEzNTY5MzEuNjQwOTczLCJuYmYiOjE3NDEzNTY5MzEuNjQwOTc2LCJleHAiOjE3NzI4OTI5MzEuNjM1MTQsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UVLVXUxv3Z6PapNV9dQe5XvLwWm9l2zKukBqTHD0facCmN2Ci900Q8aAmjsP2XaopaXnO4hfL6WnywyzaqZqHqNDFr2tygIZJRtYMsXHA3ONCi8npH9hiMD8H4_sIKgjeohWJgZgXLZp8EJGyEVXQgpzepZGFQtCQ5_Mu760sNFiLH6BG8hHBuglAHgRGfUH8WYc1MX3qJlrhxIbZPb0UONhJcOG0_OIzQqo7CjKgm7JFyddQB7m8d7_RaFDPoaVWsyNt6XLAL-yVyFc4Gy5kE5wQrw-AshcmmDO95Hr-RhMwrRnAubVixDpgA7SZKJOBvcvhqrY_hH0o2SlCdX2ahkbo-f-VtNMe3AHXDhTsdLhp8a3-Dkoo_jRL_MIwbLh97cQQNMjvXRmIl8JLm_OoQCsGANGf5go43sRw116sp4GkbYOxVmFRh-f8CezO34-UTa5-mSg6XvJPDlUKeze1LY3Ca-bCsSLVFsxLI6i5fIaKu0E7SUoL2dlyTqe2VjcIHHmySF98e3K7SSpRTx2OO2mFEQgZajFrdUf-55bh5kJjWGT_maAlx4fJFTb089IF3SvQp9lrQy4hBvR3CjlITWJtVNeSj-5Ghh_87iH0DF77XWCeUhPlWt_logry5_gJgRMAiJnBkhh2Npv2tToFBD45tmxHIqmB9xk2LFNuC0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Project D\",\r\n  \"status\": \"active\",\r\n  \"user_ids\": [2,3],  \r\n// user_ids: An array of user IDs, allowing multiple selections, e.g., 'user_ids' => [1, 2, 3]\r\n  \"attribute_values\": {\r\n    \"department\": \"Software Engineer\",\r\n    \"start_date\": \"2025-03-10\",\r\n    \"end_date\": \"2025-06-10\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/projects",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2YyZmI5Y2JmNDg2MzlmOWY0YWVlZDkwNmE5YzdjYzgzNzJmMGNiMzE3NGMwNGEwZDI5ZjQ0ODMzOGZkZGRhOWYyYmNjY2ZmN2MyYWU1M2YiLCJpYXQiOjE3NDEzNTY5MzEuNjQwOTczLCJuYmYiOjE3NDEzNTY5MzEuNjQwOTc2LCJleHAiOjE3NzI4OTI5MzEuNjM1MTQsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UVLVXUxv3Z6PapNV9dQe5XvLwWm9l2zKukBqTHD0facCmN2Ci900Q8aAmjsP2XaopaXnO4hfL6WnywyzaqZqHqNDFr2tygIZJRtYMsXHA3ONCi8npH9hiMD8H4_sIKgjeohWJgZgXLZp8EJGyEVXQgpzepZGFQtCQ5_Mu760sNFiLH6BG8hHBuglAHgRGfUH8WYc1MX3qJlrhxIbZPb0UONhJcOG0_OIzQqo7CjKgm7JFyddQB7m8d7_RaFDPoaVWsyNt6XLAL-yVyFc4Gy5kE5wQrw-AshcmmDO95Hr-RhMwrRnAubVixDpgA7SZKJOBvcvhqrY_hH0o2SlCdX2ahkbo-f-VtNMe3AHXDhTsdLhp8a3-Dkoo_jRL_MIwbLh97cQQNMjvXRmIl8JLm_OoQCsGANGf5go43sRw116sp4GkbYOxVmFRh-f8CezO34-UTa5-mSg6XvJPDlUKeze1LY3Ca-bCsSLVFsxLI6i5fIaKu0E7SUoL2dlyTqe2VjcIHHmySF98e3K7SSpRTx2OO2mFEQgZajFrdUf-55bh5kJjWGT_maAlx4fJFTb089IF3SvQp9lrQy4hBvR3CjlITWJtVNeSj-5Ghh_87iH0DF77XWCeUhPlWt_logry5_gJgRMAiJnBkhh2Npv2tToFBD45tmxHIqmB9xk2LFNuC0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/projects",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SHOW",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWVlZGRjYjczNDU0NDg0NDMxNzRiNDgyYWFlMGI0OTYxMWViZjYyNjk0ZmRmMGMwODM0OGE5YjZjNDA1NTg4ZWFlNmEwY2EwZTc2N2U4MjgiLCJpYXQiOjE3NDExNjM4MTAuNDQ1MDk1LCJuYmYiOjE3NDExNjM4MTAuNDQ1MDk4LCJleHAiOjE3NzI2OTk4MTAuNDM2OTY4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.PDTZvgkBMc7q2tqNQNscZXQqc1NwkMN9SRZkykztfuv2-0MCxR-OBMQ7qDEejFPKqiHz9tAJZOy8tLMY1bqthJ5ZPNQTzuJfSLBsZip4fXpy6b4BnjQIhl865KKpD7TjZNfDSDSDBHMhHzGTZeoni3x0JXLPP6T5UD8XRTMZ6YO1oc_Sy5etii2H2WccR5LjhAEsoubkZL8GwfyRt9cNWT4i0BVnHB707B-iPxaE-F0kEUk8vPaQ35jG7h56UiQFXIDrhP6ieCsUG3D-eSeaKR8rvqXocagiBeArSHs9bTsgZ-rORjtTTzcvqdFJcCEvmTTbto7j8HogFLyyOb6QWhmyvbshceoxR70Ue0zLOLyCYDZJLLoCZNp7AebM3BafcvePKwYGDSZfdFI5y2jf1l7pe_KN43AktO5ex7WZI8NOkxaNXKqke6_JrIweL-bw9EbojJLoojwtGpSJP1A_LsGrqPB1GybM-puUGvqJujILE3g5fgMlxqxO9CsARd8WEBedV3710rfjbIuC8OWRBz1_TI3gAfeF_99JZorCHztgF7CBYBOMjXDsqm-mqYOaZo4jjMHfPWgEj1NKmGd5GnQcnXNVEVxjcm9z9bWPTTgphuEuwgbSZ1cog3MXvR5YUkpup1X-aB1JPFf2dGP_4Ize59LDJD73o5GD7rRXGPo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/projects/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects",
+								"2"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "old",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filters",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWVlZGRjYjczNDU0NDg0NDMxNzRiNDgyYWFlMGI0OTYxMWViZjYyNjk0ZmRmMGMwODM0OGE5YjZjNDA1NTg4ZWFlNmEwY2EwZTc2N2U4MjgiLCJpYXQiOjE3NDExNjM4MTAuNDQ1MDk1LCJuYmYiOjE3NDExNjM4MTAuNDQ1MDk4LCJleHAiOjE3NzI2OTk4MTAuNDM2OTY4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.PDTZvgkBMc7q2tqNQNscZXQqc1NwkMN9SRZkykztfuv2-0MCxR-OBMQ7qDEejFPKqiHz9tAJZOy8tLMY1bqthJ5ZPNQTzuJfSLBsZip4fXpy6b4BnjQIhl865KKpD7TjZNfDSDSDBHMhHzGTZeoni3x0JXLPP6T5UD8XRTMZ6YO1oc_Sy5etii2H2WccR5LjhAEsoubkZL8GwfyRt9cNWT4i0BVnHB707B-iPxaE-F0kEUk8vPaQ35jG7h56UiQFXIDrhP6ieCsUG3D-eSeaKR8rvqXocagiBeArSHs9bTsgZ-rORjtTTzcvqdFJcCEvmTTbto7j8HogFLyyOb6QWhmyvbshceoxR70Ue0zLOLyCYDZJLLoCZNp7AebM3BafcvePKwYGDSZfdFI5y2jf1l7pe_KN43AktO5ex7WZI8NOkxaNXKqke6_JrIweL-bw9EbojJLoojwtGpSJP1A_LsGrqPB1GybM-puUGvqJujILE3g5fgMlxqxO9CsARd8WEBedV3710rfjbIuC8OWRBz1_TI3gAfeF_99JZorCHztgF7CBYBOMjXDsqm-mqYOaZo4jjMHfPWgEj1NKmGd5GnQcnXNVEVxjcm9z9bWPTTgphuEuwgbSZ1cog3MXvR5YUkpup1X-aB1JPFf2dGP_4Ize59LDJD73o5GD7rRXGPo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/projects?filters[department]=Marketing&filters[name]=HR",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "old",
+									"disabled": true
+								},
+								{
+									"key": "filters[department]",
+									"value": "Marketing"
+								},
+								{
+									"key": "filters[name]",
+									"value": "HR"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filter_by_name_or_status",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWVlZGRjYjczNDU0NDg0NDMxNzRiNDgyYWFlMGI0OTYxMWViZjYyNjk0ZmRmMGMwODM0OGE5YjZjNDA1NTg4ZWFlNmEwY2EwZTc2N2U4MjgiLCJpYXQiOjE3NDExNjM4MTAuNDQ1MDk1LCJuYmYiOjE3NDExNjM4MTAuNDQ1MDk4LCJleHAiOjE3NzI2OTk4MTAuNDM2OTY4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.PDTZvgkBMc7q2tqNQNscZXQqc1NwkMN9SRZkykztfuv2-0MCxR-OBMQ7qDEejFPKqiHz9tAJZOy8tLMY1bqthJ5ZPNQTzuJfSLBsZip4fXpy6b4BnjQIhl865KKpD7TjZNfDSDSDBHMhHzGTZeoni3x0JXLPP6T5UD8XRTMZ6YO1oc_Sy5etii2H2WccR5LjhAEsoubkZL8GwfyRt9cNWT4i0BVnHB707B-iPxaE-F0kEUk8vPaQ35jG7h56UiQFXIDrhP6ieCsUG3D-eSeaKR8rvqXocagiBeArSHs9bTsgZ-rORjtTTzcvqdFJcCEvmTTbto7j8HogFLyyOb6QWhmyvbshceoxR70Ue0zLOLyCYDZJLLoCZNp7AebM3BafcvePKwYGDSZfdFI5y2jf1l7pe_KN43AktO5ex7WZI8NOkxaNXKqke6_JrIweL-bw9EbojJLoojwtGpSJP1A_LsGrqPB1GybM-puUGvqJujILE3g5fgMlxqxO9CsARd8WEBedV3710rfjbIuC8OWRBz1_TI3gAfeF_99JZorCHztgF7CBYBOMjXDsqm-mqYOaZo4jjMHfPWgEj1NKmGd5GnQcnXNVEVxjcm9z9bWPTTgphuEuwgbSZ1cog3MXvR5YUkpup1X-aB1JPFf2dGP_4Ize59LDJD73o5GD7rRXGPo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/projects?filters[status]=in_progress",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "old",
+									"disabled": true
+								},
+								{
+									"key": "filters[status]",
+									"value": "in_progress"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filters_by_operator",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWVlZGRjYjczNDU0NDg0NDMxNzRiNDgyYWFlMGI0OTYxMWViZjYyNjk0ZmRmMGMwODM0OGE5YjZjNDA1NTg4ZWFlNmEwY2EwZTc2N2U4MjgiLCJpYXQiOjE3NDExNjM4MTAuNDQ1MDk1LCJuYmYiOjE3NDExNjM4MTAuNDQ1MDk4LCJleHAiOjE3NzI2OTk4MTAuNDM2OTY4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.PDTZvgkBMc7q2tqNQNscZXQqc1NwkMN9SRZkykztfuv2-0MCxR-OBMQ7qDEejFPKqiHz9tAJZOy8tLMY1bqthJ5ZPNQTzuJfSLBsZip4fXpy6b4BnjQIhl865KKpD7TjZNfDSDSDBHMhHzGTZeoni3x0JXLPP6T5UD8XRTMZ6YO1oc_Sy5etii2H2WccR5LjhAEsoubkZL8GwfyRt9cNWT4i0BVnHB707B-iPxaE-F0kEUk8vPaQ35jG7h56UiQFXIDrhP6ieCsUG3D-eSeaKR8rvqXocagiBeArSHs9bTsgZ-rORjtTTzcvqdFJcCEvmTTbto7j8HogFLyyOb6QWhmyvbshceoxR70Ue0zLOLyCYDZJLLoCZNp7AebM3BafcvePKwYGDSZfdFI5y2jf1l7pe_KN43AktO5ex7WZI8NOkxaNXKqke6_JrIweL-bw9EbojJLoojwtGpSJP1A_LsGrqPB1GybM-puUGvqJujILE3g5fgMlxqxO9CsARd8WEBedV3710rfjbIuC8OWRBz1_TI3gAfeF_99JZorCHztgF7CBYBOMjXDsqm-mqYOaZo4jjMHfPWgEj1NKmGd5GnQcnXNVEVxjcm9z9bWPTTgphuEuwgbSZ1cog3MXvR5YUkpup1X-aB1JPFf2dGP_4Ize59LDJD73o5GD7rRXGPo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/projects?filters[name][operator]=LIKE&filters[department][operator]=LIKE&filters[department][value]=IT&filters[name][value]=HR",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects"
+							],
+							"query": [
+								{
+									"key": "filters[name][operator]",
+									"value": "LIKE"
+								},
+								{
+									"key": "filters[department][operator]",
+									"value": "LIKE"
+								},
+								{
+									"key": "filters[department][value]",
+									"value": "IT"
+								},
+								{
+									"key": "status",
+									"value": "old",
+									"disabled": true
+								},
+								{
+									"key": "filters[name][value]",
+									"value": "HR"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2YyZmI5Y2JmNDg2MzlmOWY0YWVlZDkwNmE5YzdjYzgzNzJmMGNiMzE3NGMwNGEwZDI5ZjQ0ODMzOGZkZGRhOWYyYmNjY2ZmN2MyYWU1M2YiLCJpYXQiOjE3NDEzNTY5MzEuNjQwOTczLCJuYmYiOjE3NDEzNTY5MzEuNjQwOTc2LCJleHAiOjE3NzI4OTI5MzEuNjM1MTQsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UVLVXUxv3Z6PapNV9dQe5XvLwWm9l2zKukBqTHD0facCmN2Ci900Q8aAmjsP2XaopaXnO4hfL6WnywyzaqZqHqNDFr2tygIZJRtYMsXHA3ONCi8npH9hiMD8H4_sIKgjeohWJgZgXLZp8EJGyEVXQgpzepZGFQtCQ5_Mu760sNFiLH6BG8hHBuglAHgRGfUH8WYc1MX3qJlrhxIbZPb0UONhJcOG0_OIzQqo7CjKgm7JFyddQB7m8d7_RaFDPoaVWsyNt6XLAL-yVyFc4Gy5kE5wQrw-AshcmmDO95Hr-RhMwrRnAubVixDpgA7SZKJOBvcvhqrY_hH0o2SlCdX2ahkbo-f-VtNMe3AHXDhTsdLhp8a3-Dkoo_jRL_MIwbLh97cQQNMjvXRmIl8JLm_OoQCsGANGf5go43sRw116sp4GkbYOxVmFRh-f8CezO34-UTa5-mSg6XvJPDlUKeze1LY3Ca-bCsSLVFsxLI6i5fIaKu0E7SUoL2dlyTqe2VjcIHHmySF98e3K7SSpRTx2OO2mFEQgZajFrdUf-55bh5kJjWGT_maAlx4fJFTb089IF3SvQp9lrQy4hBvR3CjlITWJtVNeSj-5Ghh_87iH0DF77XWCeUhPlWt_logry5_gJgRMAiJnBkhh2Npv2tToFBD45tmxHIqmB9xk2LFNuC0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Updated\",\r\n    \"status\": \"in_progress\",\r\n    \"attribute_values\": {\r\n        \"start_date\": \"2025-03-08\",\r\n        \"end_date\": \"2025-03-10\",\r\n        \"department\": \"IT\",\r\n        \"priority\": \"high\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/projects/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2ExYmZlZDk1YTk3Mzc4NDJmNWE0NTNmZGI2MDRmMmJhZGU4N2RjOGZhZjE1MmM4OTJmNmU3ZGM0MmUxNmI2NzdmMWFmYjdjMzhlMGRlZDYiLCJpYXQiOjE3NDExNTUwNDIuMDg4Mzc3LCJuYmYiOjE3NDExNTUwNDIuMDg4MzgyLCJleHAiOjE3NzI2OTEwNDIuMDc3MTI4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.CvFFg8l7nZR9Cx7NjZKvSQaAs_revwaLk4c1w-etjngczxZjE-gAcP1cP7b-bNFV6rGje9t5LvTTn3mktFplkVzMMTXB1bJK_ByHvvOBqv9dNx8MFRQUoB9FKQRtniKPw8xoF7ngA5V-003VQh-zrUSj2p-LLWryjyWlyQLfJsQ4GNgv16PC7RjHS0x7vSFPI-TbtAtEmLC0iNVQ5THBWit6AUbE6gtcP-7isQTmq0lH2s0C5fecchik5mLsrq-_jRahTkg3_Mw7WtQDNJ2BMCVoqpS6-TnUKcMjSI-hziMCHLdnqiKx6g-NHq_PLzMDoWlIqcYhuKD__HoLhEfWV5DMEOkIDkp3080HgXQXh7SOKe8W15SWnJ2gpu9mBoCNxN2jH7HLID5tBQD-i5us68ExrXyy53mVCgo5DUMU64iHKXagDwI3_YZyMkC1qYCApwogsDrVLhmiOEOL_33g1oPXzb6_e68Fmzd3PSN54_PouxTiTdpNdQMnRJnW8nIPMlyRZuhvC8OWkwqZdWo-wsA3733n0wokBSqxS4kZayA-OUbSas5esVIhMa0OyXd4AfS8kg6y4AhFpQfCHwp_BBQa8gqF58RGZJFQxAzqP24p_ZY2Dn6O7YLGCF3hIP20nAn519BT1SmjMwMlw17ujG4XsNFjvm4cxx-tbLvpQ44",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "abdullah",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "ok",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/projects/7",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "timesheet_crud",
+			"item": [
+				{
+					"name": "create_timesheet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWVlZGRjYjczNDU0NDg0NDMxNzRiNDgyYWFlMGI0OTYxMWViZjYyNjk0ZmRmMGMwODM0OGE5YjZjNDA1NTg4ZWFlNmEwY2EwZTc2N2U4MjgiLCJpYXQiOjE3NDExNjM4MTAuNDQ1MDk1LCJuYmYiOjE3NDExNjM4MTAuNDQ1MDk4LCJleHAiOjE3NzI2OTk4MTAuNDM2OTY4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.PDTZvgkBMc7q2tqNQNscZXQqc1NwkMN9SRZkykztfuv2-0MCxR-OBMQ7qDEejFPKqiHz9tAJZOy8tLMY1bqthJ5ZPNQTzuJfSLBsZip4fXpy6b4BnjQIhl865KKpD7TjZNfDSDSDBHMhHzGTZeoni3x0JXLPP6T5UD8XRTMZ6YO1oc_Sy5etii2H2WccR5LjhAEsoubkZL8GwfyRt9cNWT4i0BVnHB707B-iPxaE-F0kEUk8vPaQ35jG7h56UiQFXIDrhP6ieCsUG3D-eSeaKR8rvqXocagiBeArSHs9bTsgZ-rORjtTTzcvqdFJcCEvmTTbto7j8HogFLyyOb6QWhmyvbshceoxR70Ue0zLOLyCYDZJLLoCZNp7AebM3BafcvePKwYGDSZfdFI5y2jf1l7pe_KN43AktO5ex7WZI8NOkxaNXKqke6_JrIweL-bw9EbojJLoojwtGpSJP1A_LsGrqPB1GybM-puUGvqJujILE3g5fgMlxqxO9CsARd8WEBedV3710rfjbIuC8OWRBz1_TI3gAfeF_99JZorCHztgF7CBYBOMjXDsqm-mqYOaZo4jjMHfPWgEj1NKmGd5GnQcnXNVEVxjcm9z9bWPTTgphuEuwgbSZ1cog3MXvR5YUkpup1X-aB1JPFf2dGP_4Ize59LDJD73o5GD7rRXGPo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"task_name\": \"Design Homepage\",\r\n    \"date\": \"2025-03-08\",\r\n    \"hours\": 8,\r\n    \"user_id\": 1,\r\n    \"project_id\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/timesheets",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"timesheets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_timesheet",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWVlZGRjYjczNDU0NDg0NDMxNzRiNDgyYWFlMGI0OTYxMWViZjYyNjk0ZmRmMGMwODM0OGE5YjZjNDA1NTg4ZWFlNmEwY2EwZTc2N2U4MjgiLCJpYXQiOjE3NDExNjM4MTAuNDQ1MDk1LCJuYmYiOjE3NDExNjM4MTAuNDQ1MDk4LCJleHAiOjE3NzI2OTk4MTAuNDM2OTY4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.PDTZvgkBMc7q2tqNQNscZXQqc1NwkMN9SRZkykztfuv2-0MCxR-OBMQ7qDEejFPKqiHz9tAJZOy8tLMY1bqthJ5ZPNQTzuJfSLBsZip4fXpy6b4BnjQIhl865KKpD7TjZNfDSDSDBHMhHzGTZeoni3x0JXLPP6T5UD8XRTMZ6YO1oc_Sy5etii2H2WccR5LjhAEsoubkZL8GwfyRt9cNWT4i0BVnHB707B-iPxaE-F0kEUk8vPaQ35jG7h56UiQFXIDrhP6ieCsUG3D-eSeaKR8rvqXocagiBeArSHs9bTsgZ-rORjtTTzcvqdFJcCEvmTTbto7j8HogFLyyOb6QWhmyvbshceoxR70Ue0zLOLyCYDZJLLoCZNp7AebM3BafcvePKwYGDSZfdFI5y2jf1l7pe_KN43AktO5ex7WZI8NOkxaNXKqke6_JrIweL-bw9EbojJLoojwtGpSJP1A_LsGrqPB1GybM-puUGvqJujILE3g5fgMlxqxO9CsARd8WEBedV3710rfjbIuC8OWRBz1_TI3gAfeF_99JZorCHztgF7CBYBOMjXDsqm-mqYOaZo4jjMHfPWgEj1NKmGd5GnQcnXNVEVxjcm9z9bWPTTgphuEuwgbSZ1cog3MXvR5YUkpup1X-aB1JPFf2dGP_4Ize59LDJD73o5GD7rRXGPo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/timesheets",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"timesheets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show_timesheet",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWVlZGRjYjczNDU0NDg0NDMxNzRiNDgyYWFlMGI0OTYxMWViZjYyNjk0ZmRmMGMwODM0OGE5YjZjNDA1NTg4ZWFlNmEwY2EwZTc2N2U4MjgiLCJpYXQiOjE3NDExNjM4MTAuNDQ1MDk1LCJuYmYiOjE3NDExNjM4MTAuNDQ1MDk4LCJleHAiOjE3NzI2OTk4MTAuNDM2OTY4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.PDTZvgkBMc7q2tqNQNscZXQqc1NwkMN9SRZkykztfuv2-0MCxR-OBMQ7qDEejFPKqiHz9tAJZOy8tLMY1bqthJ5ZPNQTzuJfSLBsZip4fXpy6b4BnjQIhl865KKpD7TjZNfDSDSDBHMhHzGTZeoni3x0JXLPP6T5UD8XRTMZ6YO1oc_Sy5etii2H2WccR5LjhAEsoubkZL8GwfyRt9cNWT4i0BVnHB707B-iPxaE-F0kEUk8vPaQ35jG7h56UiQFXIDrhP6ieCsUG3D-eSeaKR8rvqXocagiBeArSHs9bTsgZ-rORjtTTzcvqdFJcCEvmTTbto7j8HogFLyyOb6QWhmyvbshceoxR70Ue0zLOLyCYDZJLLoCZNp7AebM3BafcvePKwYGDSZfdFI5y2jf1l7pe_KN43AktO5ex7WZI8NOkxaNXKqke6_JrIweL-bw9EbojJLoojwtGpSJP1A_LsGrqPB1GybM-puUGvqJujILE3g5fgMlxqxO9CsARd8WEBedV3710rfjbIuC8OWRBz1_TI3gAfeF_99JZorCHztgF7CBYBOMjXDsqm-mqYOaZo4jjMHfPWgEj1NKmGd5GnQcnXNVEVxjcm9z9bWPTTgphuEuwgbSZ1cog3MXvR5YUkpup1X-aB1JPFf2dGP_4Ize59LDJD73o5GD7rRXGPo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/timesheets/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"timesheets",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_timesheet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWVlZGRjYjczNDU0NDg0NDMxNzRiNDgyYWFlMGI0OTYxMWViZjYyNjk0ZmRmMGMwODM0OGE5YjZjNDA1NTg4ZWFlNmEwY2EwZTc2N2U4MjgiLCJpYXQiOjE3NDExNjM4MTAuNDQ1MDk1LCJuYmYiOjE3NDExNjM4MTAuNDQ1MDk4LCJleHAiOjE3NzI2OTk4MTAuNDM2OTY4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.PDTZvgkBMc7q2tqNQNscZXQqc1NwkMN9SRZkykztfuv2-0MCxR-OBMQ7qDEejFPKqiHz9tAJZOy8tLMY1bqthJ5ZPNQTzuJfSLBsZip4fXpy6b4BnjQIhl865KKpD7TjZNfDSDSDBHMhHzGTZeoni3x0JXLPP6T5UD8XRTMZ6YO1oc_Sy5etii2H2WccR5LjhAEsoubkZL8GwfyRt9cNWT4i0BVnHB707B-iPxaE-F0kEUk8vPaQ35jG7h56UiQFXIDrhP6ieCsUG3D-eSeaKR8rvqXocagiBeArSHs9bTsgZ-rORjtTTzcvqdFJcCEvmTTbto7j8HogFLyyOb6QWhmyvbshceoxR70Ue0zLOLyCYDZJLLoCZNp7AebM3BafcvePKwYGDSZfdFI5y2jf1l7pe_KN43AktO5ex7WZI8NOkxaNXKqke6_JrIweL-bw9EbojJLoojwtGpSJP1A_LsGrqPB1GybM-puUGvqJujILE3g5fgMlxqxO9CsARd8WEBedV3710rfjbIuC8OWRBz1_TI3gAfeF_99JZorCHztgF7CBYBOMjXDsqm-mqYOaZo4jjMHfPWgEj1NKmGd5GnQcnXNVEVxjcm9z9bWPTTgphuEuwgbSZ1cog3MXvR5YUkpup1X-aB1JPFf2dGP_4Ize59LDJD73o5GD7rRXGPo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"task_name\": \"RE Design Homepage\",\r\n    \"date\": \"2025-03-01\",\r\n    \"hours\": 8,\r\n    \"user_id\": 1,\r\n    \"project_id\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/timesheets/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"timesheets",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2YyZmI5Y2JmNDg2MzlmOWY0YWVlZDkwNmE5YzdjYzgzNzJmMGNiMzE3NGMwNGEwZDI5ZjQ0ODMzOGZkZGRhOWYyYmNjY2ZmN2MyYWU1M2YiLCJpYXQiOjE3NDEzNTY5MzEuNjQwOTczLCJuYmYiOjE3NDEzNTY5MzEuNjQwOTc2LCJleHAiOjE3NzI4OTI5MzEuNjM1MTQsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.UVLVXUxv3Z6PapNV9dQe5XvLwWm9l2zKukBqTHD0facCmN2Ci900Q8aAmjsP2XaopaXnO4hfL6WnywyzaqZqHqNDFr2tygIZJRtYMsXHA3ONCi8npH9hiMD8H4_sIKgjeohWJgZgXLZp8EJGyEVXQgpzepZGFQtCQ5_Mu760sNFiLH6BG8hHBuglAHgRGfUH8WYc1MX3qJlrhxIbZPb0UONhJcOG0_OIzQqo7CjKgm7JFyddQB7m8d7_RaFDPoaVWsyNt6XLAL-yVyFc4Gy5kE5wQrw-AshcmmDO95Hr-RhMwrRnAubVixDpgA7SZKJOBvcvhqrY_hH0o2SlCdX2ahkbo-f-VtNMe3AHXDhTsdLhp8a3-Dkoo_jRL_MIwbLh97cQQNMjvXRmIl8JLm_OoQCsGANGf5go43sRw116sp4GkbYOxVmFRh-f8CezO34-UTa5-mSg6XvJPDlUKeze1LY3Ca-bCsSLVFsxLI6i5fIaKu0E7SUoL2dlyTqe2VjcIHHmySF98e3K7SSpRTx2OO2mFEQgZajFrdUf-55bh5kJjWGT_maAlx4fJFTb089IF3SvQp9lrQy4hBvR3CjlITWJtVNeSj-5Ghh_87iH0DF77XWCeUhPlWt_logry5_gJgRMAiJnBkhh2Npv2tToFBD45tmxHIqmB9xk2LFNuC0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/timesheets/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"timesheets",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
